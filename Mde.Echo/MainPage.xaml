@@ -10,7 +10,8 @@
             
             <Entry x:Name="txtInput" Placeholder="Type your text here" BackgroundColor="Aqua" />
 
-            <Button x:Name="btnEcho" Text="Echo!" />
+            <Button x:Name="btnEcho" Text="Echo!"
+                    Clicked="BtnEcho_Clicked" />
 
             <Label x:Name="lblOutput" Text="Test" 
                    Style="{StaticResource OutputLabel}" />

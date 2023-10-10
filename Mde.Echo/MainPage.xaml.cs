@@ -35,5 +35,16 @@ namespace Mde.Echo
             );
         }
 
+        private void BtnEcho_Clicked(object sender, EventArgs e)
+        {
+            //1. haal input op
+            string input = txtInput.Text?.Trim() ?? "";
+
+            //2. de boel omdraaien
+            string output = new string(input.Reverse().ToArray());
+
+            //3. output naar label schrijven
+            lblOutput.Text = output;
+        }
     }
 }
