@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mde.Echo.MainPage">
+
+    <ScrollView>
+        <StackLayout Spacing="40">
+
+            <Label Text="ECHO" Style="{StaticResource EchoTitle}" />
+            
+            <Entry x:Name="txtInput" Placeholder="Type your text here" BackgroundColor="Aqua" />
+
+            <Button x:Name="btnEcho" Text="Echo!" />
+
+            <Label x:Name="lblOutput" Text="Test" 
+                   Style="{StaticResource OutputLabel}" />
+
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>
