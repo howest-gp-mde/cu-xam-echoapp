@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FreshMvvm;
+using Mde.Echo.Pages;
+using Mde.Echo.ViewModels;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +13,7 @@ namespace Mde.Echo
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = FreshPageModelResolver.ResolvePageModel<MainViewModel>();
         }
 
         protected override void OnStart()

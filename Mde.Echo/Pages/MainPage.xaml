@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewmodels="clr-namespace:Mde.Echo.ViewModels"
+             x:DataType="viewmodels:MainViewModel"
+             x:Class="Mde.Echo.Pages.MainPage">
+
+    <ScrollView>
+        <StackLayout Spacing="40">
+
+            <Label Text="ECHO" Style="{StaticResource EchoTitle}" />
+            
+            <Entry Text="{Binding Input }"
+                   Placeholder="Type your text here" BackgroundColor="Aqua" />
+
+            <Button x:Name="btnEcho" Text="Echo!" />
+
+            <Label Text="{Binding Output }" 
+                   Style="{StaticResource OutputLabel}" />
+
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>
