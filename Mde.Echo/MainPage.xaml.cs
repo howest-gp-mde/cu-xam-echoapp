@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Mde.Echo.Services;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -11,10 +12,13 @@ namespace Mde.Echo
     public partial class MainPage : ContentPage
     {
         private const int translationDelta = 600;
+        protected readonly EchoService _echoService;
 
         public MainPage()
         {
             InitializeComponent();
+
+            _echoService = new EchoService();
         }
 
         protected override void OnAppearing()
@@ -37,14 +41,7 @@ namespace Mde.Echo
 
         private void BtnEcho_Clicked(object sender, EventArgs e)
         {
-            //1. haal input op
-            string input = txtInput.Text?.Trim() ?? "";
-
-            //2. de boel omdraaien
-            string output = new string(input.Reverse().ToArray());
-
-            //3. output naar label schrijven
-            lblOutput.Text = output;
+            lblOutput.Text = _echoService.ReverseIt(txtInput.Text);
         }
     }
 }
